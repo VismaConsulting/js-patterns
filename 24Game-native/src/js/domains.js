@@ -1,22 +1,27 @@
+var visma = visma || {};
 /**
  * Collection of domain classes
  */
+(function (visma) {
+    "use strict";
 
-function Card(suit, value) {
-    this.suit = suit;
-    this.value = value;
-}
-Card.prototype.toString = function () {
-    return "[Object Card<" + this.suit + ", " + this.value + ">]"
-};
-Card.suits = ["hearts", "diamonds", "clubs", "spades"];
-Card.values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+    function Card(suit, value) {
+        function toString() {
+            return "[Object Card<" + suit + ", " + value + ">]";
+        }
+
+        return {
+            toString: toString,
+            suit: suit,
+            value: value
+        };
+
+    }
+
+    Card.suits = ["hearts", "diamonds", "clubs", "spades"];
+    Card.values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 //    ,11, 12, 13
-];
+    ];
+    visma.Card = Card;
 
-function CardImage(card) {
-    var imgagePath = "../img/classig-playing-cards.png"
-
-
-
-}
+})(visma);

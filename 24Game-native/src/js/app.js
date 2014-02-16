@@ -1,3 +1,5 @@
+var visma = visma || {};
+
 (function (visma, $) {
     "use strict";
 
@@ -82,7 +84,7 @@
                 var element = ui.item;
                 if(element.hasClass("cardLgBtn")) {
                     element.draggable("option","disabled","true");
-                };
+                }
                 $($(this).data()["ui-sortable"].currentItem[0]).click(function(e) {
                     if(element.hasClass("cardLgBtn")) {
                         element.draggable("enable");
@@ -124,7 +126,6 @@
     }
 
     function showMeTheTime(time) {
-        var time = time;
         var melding = "";
         var numEnding = "er";
         if (time.m > 0) {
@@ -139,6 +140,6 @@
     visma.app = {
         init: init,
         startGame: startGame
-    }
+    };
 
 })(visma, jQuery);
