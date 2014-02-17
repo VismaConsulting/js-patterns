@@ -3,19 +3,32 @@ var visma = visma || {};
 (function (visma, $) {
     "use strict";
 
-    var $submitAnswerDiv, $gameDiv, $cards, $checkAnswer, $answerValue, $infobox, gameLoop;
+    var gameLoop,
+        $submitBtn, $showTimeUsed, $timeused, $answerbox,
+        $submitAnswerDiv, $gameDiv, $cards, $checkAnswer,
+        $answerValue, $infobox, $newgameBtn, $operators;
+
+    function main($dom) {
+        $submitAnswerDiv = $dom.find("#submitAnswerDiv");
+        $gameDiv = $dom.find("#gameDiv");
+        $cards = $dom.find("#cards");
+        $checkAnswer = $dom.find("#checkAnswer");
+        $answerValue = $dom.find("#answerbox");
+        $infobox = $dom.find("#info");
+        $submitBtn = $dom.find("#submitBtn");
+        $showTimeUsed = $dom.find("#showTimeUsed");
+        $timeused = $dom.find("#timeused");
+        $answerbox = $dom.find("#answerbox");
+        $newgameBtn = $dom.find("#newgameBtn");
+        $operators = $dom.find("#operators div");
+
+        init();
+    }
 
     function init() {
-        $submitAnswerDiv = $("#submitAnswerDiv");
-        $gameDiv = $("#gameDiv");
-        $cards = $("#cards");
-        $checkAnswer = $("#checkAnswer");
-        $answerValue = $("#answerbox");
-        $infobox = $("#info");
+        gameLoop = new visma.GameLoop(visma.game);
 
-        gameLoop = new GameLoop(visma.game);
-
-        $("#submitBtn").on("click", function(){
+        $submitBtn.on("click", function () {
             console.log("got answer", $answerValue.find("span").text());
             gameLoop.answer($answerValue.find("span").text());
             var isCorrect = gameLoop.isCorrectAnswer();
@@ -23,8 +36,8 @@ var visma = visma || {};
             if (isCorrect) {
                 //console.log("correct answer, show the submit form");
                 var tidMelding = showMeTheTime(timeUsed);
-                $("#showTimeUsed").html("Tid brukt: <span>" + tidMelding + "</span>");
-                $("#timeused").val(eval(timeUsed.s + "+" + timeUsed.m + "*60"));
+                $showTimeUsed.html("Tid brukt: <span>" + tidMelding + "</span>");
+                $timeused.val(eval(timeUsed.s + "+" + timeUsed.m + "*60"));
                 console.log(timeUsed);
                 clearAndSetView("submit");
             } else {
@@ -36,11 +49,11 @@ var visma = visma || {};
             }
         });
 
-        $("#newgameBtn").on("click", function(){
+        $newgameBtn.on("click", function () {
             startGame();
         });
 
-        $("#howtoplayBtn").on("click", function(){
+        $("#howtoplayBtn").on("click", function () {
             $("#howToPlay").slideToggle();
         });
     }
@@ -51,7 +64,6 @@ var visma = visma || {};
         gameLoop.newGame();
         var cards = gameLoop.cards();
 
-        //console.log("cards", cards);
         for (var i = 0; i < cards.length; i++) {
             var $span = $("<span>" + cards[i].value + "</span>");
             $cards.append($("<div class='cardLgBtn " + cards[i].suit + "'></div>").append($span));
@@ -65,7 +77,6 @@ var visma = visma || {};
             $checkAnswer.unbind();
             $submitAnswerDiv.hide();
             $gameDiv.show();
-            //console.log("game", $submitAnswerDiv);
 
             $cards.children("div").remove();
             $answerValue.empty();
@@ -78,15 +89,15 @@ var visma = visma || {};
     }
 
     function makeItSortable() {
-        $("#answerbox").sortable({             
+        $answerbox.sortable({
             revert: false,
             receive: function (event, ui) {
                 var element = ui.item;
-                if(element.hasClass("cardLgBtn")) {
-                    element.draggable("option","disabled","true");
+                if (element.hasClass("cardLgBtn")) {
+                    element.draggable("option", "disabled", "true");
                 }
-                $($(this).data()["ui-sortable"].currentItem[0]).click(function(e) {
-                    if(element.hasClass("cardLgBtn")) {
+                $($(this).data()["ui-sortable"].currentItem[0]).click(function (e) {
+                    if (element.hasClass("cardLgBtn")) {
                         element.draggable("enable");
                         $(this).remove();
                     } else {
@@ -98,29 +109,29 @@ var visma = visma || {};
             placeholder: "sortable-placeholder"
         });
 
-        $("#cards").disableSelection();
+        $cards.disableSelection();
 
-        $( "#cards div" ).draggable({
-          connectToSortable: "#answerbox", 
-          helper: "clone",         
-          revert: "invalid",
-          start: function(event, ui) { 
+        $cards.find("div").draggable({
+            connectToSortable: "#answerbox",
+            helper: "clone",
+            revert: "invalid",
+            start: function (event, ui) {
                 $(this).draggable("option", "cursorAt", {
                     left: Math.floor(this.clientWidth / 2),
                     top: Math.floor(this.clientHeight / 2)
-                }); 
+                });
             }
         });
 
-        $( "#operators div" ).draggable({
-          connectToSortable: "#answerbox",
-          helper: "clone",
-          revert: "invalid",
-          start: function(event, ui) { 
+        $operators.draggable({
+            connectToSortable: "#answerbox",
+            helper: "clone",
+            revert: "invalid",
+            start: function (event, ui) {
                 $(this).draggable("option", "cursorAt", {
                     left: Math.floor(this.clientWidth / 2),
                     top: Math.floor(this.clientHeight / 2)
-                }); 
+                });
             }
         });
     }
@@ -138,6 +149,7 @@ var visma = visma || {};
     }
 
     visma.app = {
+        main: main,
         init: init,
         startGame: startGame
     };

@@ -40,11 +40,7 @@ var visma = visma || {};
         }
     }
 
-    function init() {
-    }
-
     visma.game = {
-        init: init,
         drawFromNewDeck: drawFromNewDeck,
         verifyAnswer: verifyAnswer
     };
