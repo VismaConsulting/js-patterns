@@ -1,5 +1,15 @@
 (function () {
     "use strict";
+    $.ajax({
+        url: MY_URL,
+        type: "POST",
+        contentType: "application/json",
+        data: dataToSend
+    }).done(function() {
+        console.log("OK");
+    }).fail(function() {
+        console.log("ERROR");
+    });
 
     console.log('my self invoked function');
 })();
