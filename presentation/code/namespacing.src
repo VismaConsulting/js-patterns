@@ -1,0 +1,9 @@
+var visma = visma || {}; // create namespace if it doesn’t exist
+
+(function(jquery, consulting) {
+    "use strict";
+
+    visma.feature = function() {
+        console.log('my feature', consulting);
+    };
+})(jquery, visma.consulting);

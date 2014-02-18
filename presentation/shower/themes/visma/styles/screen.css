@@ -1,0 +1,549 @@
+@font-face {
+  font-family: 'PT Sans';
+  src: url(../fonts/PTSans.woff) format("woff"), url(../fonts/PTSans.ttf) format("truetype"), url(../fonts/PTSans.svg#PTSans-Regular) format("svg"); }
+
+@font-face {
+  font-weight: bold;
+  font-family: 'PT Sans';
+  src: url(../fonts/PTSans.Bold.woff) format("woff"), url(../fonts/PTSans.Bold.ttf) format("truetype"), url(../fonts/PTSans.Bold.svg#PTSans-Bold) format("svg"); }
+
+@font-face {
+  font-style: italic;
+  font-family: 'PT Sans';
+  src: url(../fonts/PTSans.Italic.woff) format("woff"), url(../fonts/PTSans.Italic.ttf) format("truetype"), url(../fonts/PTSans.Italic.svg#PTSans-Italic) format("svg"); }
+
+@font-face {
+  font-style: italic;
+  font-weight: bold;
+  font-family: 'PT Sans';
+  src: url(../fonts/PTSans.Bold.Italic.woff) format("woff"), url(../fonts/PTSans.Bold.Italic.ttf) format("truetype"), url(../fonts/PTSans.Bold.Italic.svg#PTSans-BoldItalic) format("svg"); }
+
+@font-face {
+  font-family: 'PT Sans Narrow';
+  font-weight: bold;
+  src: url(../fonts/PTSans.Narrow.Bold.woff) format("woff"), url(../fonts/PTSans.Narrow.Bold.ttf) format("truetype"), url(../fonts/PTSans.Narrow.Bold.svg#PTSans-NarrowBold) format("svg"); }
+
+@font-face {
+  font-family: 'PT Mono';
+  src: url(../fonts/PTMono.woff) format("woff"), url(../fonts/PTMono.ttf) format("truetype"), url(../fonts/PTMono.svg#PTMono) format("svg"); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/reset\.scss}line{font-family:\0000317}}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/reset\.scss}line{font-family:\0000326}}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/reset\.scss}line{font-family:\0000329}}
+body {
+  line-height: 1; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/reset\.scss}line{font-family:\0000332}}
+ol, ul {
+  list-style: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/reset\.scss}line{font-family:\0000335}}
+blockquote, q {
+  quotes: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/reset\.scss}line{font-family:\0000339}}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/reset\.scss}line{font-family:\0000343}}
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\000039}}
+body {
+  counter-reset: slide;
+  font: 25px/2 "PT Sans", sans-serif; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\0000316}}
+.slide {
+  width: 1024px;
+  height: 640px;
+  background: white url(../images/visma_logo.png) 720px 540px no-repeat;
+  color: #000; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\0000321}}
+  .slide:after {
+    position: absolute;
+    counter-increment: slide;
+    content: counter(slide, decimal-leading-zero);
+    line-height: 1; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\0000327}}
+  .debug .slide {
+    background: url(../images/ribbon.svg) 865px 0 no-repeat, url(../images/grid-16x10.png) no-repeat, white; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\0000338}}
+  .slide > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    padding: 71px 120px 0;
+    width: 784px;
+    height: 569px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\0000351}}
+.slide h2 {
+  margin: 0 0 37px;
+  color: #666;
+  font: bold 50px/1 "PT Sans Narrow", sans-serif; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\0000357}}
+.slide p {
+  margin: 0 0 50px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\0000360}}
+.slide p.note {
+  color: #999; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\0000363}}
+.slide a {
+  border-bottom: 0.1em solid;
+  color: #0174A7;
+  text-decoration: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\0000368}}
+.slide b, .slide strong {
+  font-weight: bold; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\0000371}}
+.slide i, .slide em {
+  font-style: italic; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\0000374}}
+.slide kbd, .slide samp {
+  padding: 3px 8px;
+  border-radius: 8px;
+  background: #FAFAA2;
+  color: #000;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  line-height: 1;
+  font-family: "PT Mono", monospace; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\0000384}}
+.slide blockquote {
+  font-style: italic; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\0000386}}
+  .slide blockquote:before {
+    position: absolute;
+    margin: -16px 0 0 -80px;
+    color: #CCC;
+    font: 200px/1 "PT Sans", sans-serif;
+    content: '\201C'; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\0000393}}
+  .slide blockquote + figcaption {
+    margin: -50px 0 40px;
+    font-style: italic;
+    font-weight: bold; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003100}}
+.slide ol, .slide ul {
+  margin: 0 0 50px;
+  counter-reset: list; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003103}}
+  .slide ol li, .slide ul li {
+    text-indent: -2em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003105}}
+    .slide ol li:before, .slide ul li:before {
+      display: inline-block;
+      width: 2em;
+      color: #BBB;
+      text-align: right; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003113}}
+  .slide ol ol,
+  .slide ol ul, .slide ul ol,
+  .slide ul ul {
+    margin: 0 0 0 39px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003117}}
+.slide ul > li:before {
+  content: '\2022\00A0\00A0'; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003120}}
+.slide ul > li:lang(ru):before {
+  content: '\2014\00A0\00A0'; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003123}}
+.slide ol > li:before {
+  counter-increment: list;
+  content: counter(list) ".\00A0"; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003128}}
+.slide pre {
+  margin: 0 0 50px;
+  line-height: 120%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003131}}
+  .slide pre mark {
+    padding: 3px 8px;
+    border-radius: 8px;
+    background: #F7FCA0;
+    color: #000;
+    font-style: normal; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003137}}
+    .slide pre mark.important {
+      background: #C00;
+      color: #FFF;
+      font-weight: normal; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003142}}
+    .slide pre mark.comment {
+      padding: 0;
+      background: none;
+      color: #999; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003150}}
+.slide.cover, .slide.vismacover, .slide.covershell, .slide.coverlightouse, .slide.covermoon {
+  background: #000; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003153}}
+  .slide.cover img, .slide.vismacover img, .slide.covershell img, .slide.coverlightouse img, .slide.covermoon img, .slide.cover svg, .slide.vismacover svg, .slide.covershell svg, .slide.coverlightouse svg, .slide.covermoon svg, .slide.cover video, .slide.vismacover video, .slide.covershell video, .slide.coverlightouse video, .slide.covermoon video,
+  .slide.cover object,
+  .slide.vismacover object,
+  .slide.covershell object,
+  .slide.coverlightouse object,
+  .slide.covermoon object, .slide.cover canvas, .slide.vismacover canvas, .slide.covershell canvas, .slide.coverlightouse canvas, .slide.covermoon canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003161}}
+  .slide.cover.w img, .slide.w.vismacover img, .slide.w.covershell img, .slide.w.coverlightouse img, .slide.w.covermoon img, .slide.cover.w svg, .slide.w.vismacover svg, .slide.w.covershell svg, .slide.w.coverlightouse svg, .slide.w.covermoon svg, .slide.cover.w video, .slide.w.vismacover video, .slide.w.covershell video, .slide.w.coverlightouse video, .slide.w.covermoon video,
+  .slide.cover.w object,
+  .slide.w.vismacover object,
+  .slide.w.covershell object,
+  .slide.w.coverlightouse object,
+  .slide.w.covermoon object, .slide.cover.w canvas, .slide.w.vismacover canvas, .slide.w.covershell canvas, .slide.w.coverlightouse canvas, .slide.w.covermoon canvas {
+    top: 50%;
+    width: 100%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%); }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003169}}
+  .slide.cover.h img, .slide.h.vismacover img, .slide.h.covershell img, .slide.h.coverlightouse img, .slide.h.covermoon img, .slide.cover.h svg, .slide.h.vismacover svg, .slide.h.covershell svg, .slide.h.coverlightouse svg, .slide.h.covermoon svg, .slide.cover.h video, .slide.h.vismacover video, .slide.h.covershell video, .slide.h.coverlightouse video, .slide.h.covermoon video,
+  .slide.cover.h object,
+  .slide.h.vismacover object,
+  .slide.h.covershell object,
+  .slide.h.coverlightouse object,
+  .slide.h.covermoon object, .slide.cover.h canvas, .slide.h.vismacover canvas, .slide.h.covershell canvas, .slide.h.coverlightouse canvas, .slide.h.covermoon canvas {
+    left: 50%;
+    height: 100%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%); }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003177}}
+  .slide.cover.w.h img, .slide.w.h.vismacover img, .slide.w.h.covershell img, .slide.w.h.coverlightouse img, .slide.w.h.covermoon img, .slide.cover.w.h svg, .slide.w.h.vismacover svg, .slide.w.h.covershell svg, .slide.w.h.coverlightouse svg, .slide.w.h.covermoon svg, .slide.cover.w.h video, .slide.w.h.vismacover video, .slide.w.h.covershell video, .slide.w.h.coverlightouse video, .slide.w.h.covermoon video,
+  .slide.cover.w.h object,
+  .slide.w.h.vismacover object,
+  .slide.w.h.covershell object,
+  .slide.w.h.coverlightouse object,
+  .slide.w.h.covermoon object, .slide.cover.w.h canvas, .slide.w.h.vismacover canvas, .slide.w.h.covershell canvas, .slide.w.h.coverlightouse canvas, .slide.w.h.covermoon canvas {
+    top: 0;
+    left: 0;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003187}}
+.slide.vismacover h1, .slide.covershell h1, .slide.coverlightouse h1, .slide.covermoon h1 {
+  margin: 0 0 20px;
+  color: #969696;
+  font: bold 30px/1 "PT Sans Narrow", sans-serif;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%); }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003193}}
+.slide.vismacover h2, .slide.covershell h2, .slide.coverlightouse h2, .slide.covermoon h2 {
+  margin: 0 0 37px;
+  color: #969696;
+  font: bold 50px/1 "PT Sans Narrow", sans-serif;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%); }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003201}}
+.slide.covershell {
+  background: white url("../images/shell.jpg") no-repeat;
+  background-size: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003205}}
+  .slide.covershell div {
+    margin: 70px 0 0 -20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003210}}
+.slide.coverlightouse {
+  background: white url("../images/lighthouse.png") no-repeat;
+  background-size: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003214}}
+  .slide.coverlightouse div {
+    margin: 80px 0 0 -20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003218}}
+.slide.covermoon {
+  background: white url("../images/moon.jpg") no-repeat;
+  background-size: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003222}}
+  .slide.covermoon div {
+    margin: 150px 0 0 -20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003225}}
+  .slide.covermoon h1 {
+    color: #dcdcdc; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003228}}
+  .slide.covermoon h2 {
+    color: #dcdcdc; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003234}}
+.slide.shout {
+  background-image: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003236}}
+  .slide.shout h2 {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    line-height: 1;
+    font-size: 150px;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%); }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003248}}
+.slide .place {
+  position: absolute; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003250}}
+  .slide .place.t, .slide .place.m, .slide .place.b {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%); }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003254}}
+  .slide .place.t {
+    top: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003255}}
+  .slide .place.b {
+    bottom: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003256}}
+  .slide .place.l, .slide .place.m, .slide .place.r {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%); }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003260}}
+  .slide .place.l {
+    left: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003261}}
+  .slide .place.m {
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003262}}
+  .slide .place.r {
+    right: 0;
+    left: auto; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003266}}
+  .slide .place.t.l, .slide .place.t.r, .slide .place.b.r, .slide .place.b.l {
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003269}}
+  .slide .place.t.l, .slide .place.t.r {
+    top: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003270}}
+  .slide .place.b.r, .slide .place.b.l {
+    top: auto; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003276}}
+.list {
+  padding: 80px 0 40px 100px;
+  background: #585a5e url(../images/linen.png); }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003279}}
+  .list:after {
+    clear: both;
+    display: block;
+    content: ''; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003285}}
+  .list .caption {
+    margin: 0 0 50px;
+    color: #3C3D40;
+    text-shadow: 0 1px 1px #8d8e90; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003289}}
+    .list .caption h1 {
+      font: bold 50px/1 "PT Sans Narrow", sans-serif; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003292}}
+    .list .caption a {
+      color: #4B86C2;
+      text-shadow: 0 -1px 1px #1f3f60;
+      text-decoration: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003296}}
+      .list .caption a:hover {
+        color: #5ca4ed; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003302}}
+  .list .slide {
+    position: relative;
+    float: left;
+    margin: 0 -412px -220px 0;
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5);
+    transform: scale(0.5); }
+    @media (max-width: 1324px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003302}}
+      .list .slide {
+        margin: 0 -688px -400px 0;
+        -webkit-transform: scale(0.25);
+        -moz-transform: scale(0.25);
+        -ms-transform: scale(0.25);
+        -o-transform: scale(0.25);
+        transform: scale(0.25); } }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003312}}
+    .list .slide:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 512px;
+      height: 320px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.005), 0 20px 50px rgba(42, 43, 45, 0.6);
+      border-radius: 2px;
+      content: '';
+      -webkit-transform-origin: 0 0;
+      -moz-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
+      -o-transform-origin: 0 0;
+      transform-origin: 0 0;
+      -webkit-transform: scale(2);
+      -moz-transform: scale(2);
+      -ms-transform: scale(2);
+      -o-transform: scale(2);
+      transform: scale(2); }
+      @media (max-width: 1324px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003312}}
+        .list .slide:before {
+          width: 256px;
+          height: 160px;
+          -webkit-transform: scale(4);
+          -moz-transform: scale(4);
+          -ms-transform: scale(4);
+          -o-transform: scale(4);
+          transform: scale(4); } }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003332}}
+    .list .slide:after {
+      bottom: -100px;
+      left: 120px;
+      color: #3C3D40;
+      text-shadow: 0 2px 1px #8d8e90;
+      font-weight: bold;
+      font-size: 50px; }
+      @media (max-width: 1324px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003332}}
+        .list .slide:after {
+          bottom: -180px;
+          text-shadow: 0 4px 2px #8d8e90;
+          font-size: 100px; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003345}}
+    .list .slide:hover:before {
+      box-shadow: 0 0 0 10px rgba(42, 43, 45, 0.3), 0 20px 50px rgba(42, 43, 45, 0.6); }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003351}}
+    .list .slide:target:before {
+      box-shadow: 0 0 0 1px #305f8d, 0 0 0 10px #3c7cbd, 0 20px 50px rgba(42, 43, 45, 0.6); }
+      @media (max-width: 1324px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003351}}
+        .list .slide:target:before {
+          box-shadow: 0 0 0 1px #305f8d, 0 0 0 10px #3c7cbd, 0 20px 50px rgba(42, 43, 45, 0.6); } }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003363}}
+    .list .slide:target:after {
+      text-shadow: 0 2px 1px rgba(42, 43, 45, 0.6);
+      color: #4B86C2; }
+      @media (max-width: 1324px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003363}}
+        .list .slide:target:after {
+          text-shadow: 0 4px 2px rgba(42, 43, 45, 0.6); } }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003376}}
+.full {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  margin: -320px 0 0 -512px;
+  width: 1024px;
+  height: 640px;
+  background: #000; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003385}}
+  .full .caption {
+    display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003388}}
+  .full .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip: rect(0, 0, 0, 0); }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003393}}
+    .full .slide:after {
+      left: 120px;
+      bottom: 80px;
+      color: #CCC;
+      line-height: 18px;
+      font-size: 25px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003400}}
+    .full .slide:target {
+      clip: rect(0, auto, auto, 0); }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003405}}
+    .full .slide.cover, .full .slide.vismacover, .full .slide.covershell, .full .slide.coverlightouse, .full .slide.covermoon, .full .slide.shout {
+      z-index: 1; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003407}}
+      .full .slide.cover:after, .full .slide.vismacover:after, .full .slide.covershell:after, .full .slide.coverlightouse:after, .full .slide.covermoon:after, .full .slide.shout:after {
+        content: ''; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003413}}
+  .full li.next {
+    display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003415}}
+    .full li.next.active {
+      display: block; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003420}}
+  .full .progress {
+    position: absolute;
+    right: 118px;
+    bottom: 15px;
+    left: 118px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/visma\/shower-visma\/shower\/themes\/visma\/styles\/screen\.scss}line{font-family:\00003425}}
+    .full .progress div {
+      width: 0;
+      height: 10px;
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4);
+      border-radius: 5px;
+      background: rgba(177, 177, 177, 0.4);
+      -webkit-transition: width 0.2s linear;
+      -moz-transition: width 0.2s linear;
+      -o-transition: width 0.2s linear;
+      transition: width 0.2s linear; }
