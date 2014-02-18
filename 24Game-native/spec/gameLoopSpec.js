@@ -1,4 +1,4 @@
-(function(visma, describe, it, expect, beforeEach){
+(function (GameLoop, describe, it, expect, beforeEach) {
     "use strict";
 
     describe("GameLoop suite", function () {
@@ -10,7 +10,7 @@
         });
 
         it("should be able to time the game when done", function () {
-            var gameLoop = new visma.GameLoop(game);
+            var gameLoop = new GameLoop(game);
             gameLoop.newGame();
 
             setTimeout(function () {
@@ -24,7 +24,7 @@
                 return true;
             });
 
-            var gameLoop = new visma.GameLoop(game);
+            var gameLoop = new GameLoop(game);
             gameLoop.newGame();
             gameLoop.answer("fake value");
 
@@ -37,7 +37,7 @@
                 return false;
             });
 
-            var gameLoop = new visma.GameLoop(game);
+            var gameLoop = new GameLoop(game);
             gameLoop.newGame();
             gameLoop.answer("fake value");
 
@@ -50,7 +50,7 @@
                 throw "some message";
             });
 
-            var gameLoop = new visma.GameLoop(game);
+            var gameLoop = new GameLoop(game);
             gameLoop.newGame();
             gameLoop.answer("fake value");
 
@@ -58,4 +58,4 @@
         });
 
     });
-})(visma, describe, it, expect, beforeEach) ;
+})(visma.GameLoop, describe, it, expect, beforeEach);

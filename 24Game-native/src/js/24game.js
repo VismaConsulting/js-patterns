@@ -1,14 +1,14 @@
 var visma = visma || {};
 
-(function (visma) {
+(function (visma, Card) {
     "use strict";
 
     function drawFromNewDeck(numberOfCards) {
         var deck = [];
         var cards = [];
-        visma.Card.suits.forEach(function (suit) {
-            visma.Card.values.forEach(function (cardValue) {
-                deck.push(new visma.Card(suit, cardValue));
+        Card.suits.forEach(function (suit) {
+            Card.values.forEach(function (cardValue) {
+                deck.push(new Card(suit, cardValue));
             });
         });
         if (numberOfCards > deck.length) {
@@ -45,4 +45,4 @@ var visma = visma || {};
         verifyAnswer: verifyAnswer
     };
 
-})(visma);
+})(visma, visma.Card);
