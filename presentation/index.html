@@ -34,6 +34,7 @@
             color: #969696;
             font: bold 25px/1 "PT Sans Narrow", sans-serif;
         }
+
         #github img {
             width: 10%;
             display: inline-block;
@@ -59,7 +60,7 @@
 
         <h2>js Pattern</h2>
 
-        <div id="github"><img src="pictures/GitHub-Logo.png" > ...</div>
+        <div id="github"><img src="pictures/GitHub-Logo.png"> ...</div>
     </div>
 </section>
 
@@ -72,26 +73,48 @@
     <div>
         <h2>Agenda</h2>
         <ul>
-            <li>Self invoked function</li>
+            <li>Immediately Invoked Function Expression</li>
             <li>Namespacing</li>
-            <li>Encapsulating functions</li>
-            <li>AMD</li>
+            <li>Encapsulating Functions</li>
+            <li>Asynchronous Module Definition (AMD)</li>
+            <li>Testing!</li>
         </ul>
     </div>
 </section>
 
 <!--
-####
-#### Patterns
-####
+#### Pattern: Self invoked function
  -->
 <section class="slide">
     <div>
-        <h2>Self invoked function</h2>
+        <h2>Immediately Invoked Function Expression</h2>
+        <ul>
+            <li>Executed at most ones</li>
+            <li>Loaded ones</li>
+            <li>does not pollute global variable space</li>
+        </ul>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>Immediately Invoked Function Expression</h2>
         <pre class="prettyprint codeborder"><code class="language-js" data-src="code/selfInvoke.src"></code></pre>
     </div>
 </section>
 
+<!--
+#### Pattern: Namespacing
+ -->
+<section class="slide">
+    <div>
+        <h2>Namespacing</h2>
+        <ul>
+            <li>Reduces the global variable issue</li>
+            <li>Gives a package like structure</li>
+            <li>Injection like pattern</li>
+        </ul>
+    </div>
+</section>
 <section class="slide">
     <div>
         <h2>Namespacing</h2>
@@ -99,6 +122,9 @@
     </div>
 </section>
 
+<!--
+#### Pattern: Module Pattern
+ -->
 <section class="slide">
     <div>
         <h2>Module Pattern</h2>
@@ -106,11 +132,81 @@
     </div>
 </section>
 
-
+<!--
+#### Pattern: Encapsulating
+ -->
 <section class="slide">
     <div>
-        <h2>Encapsulating functions</h2>
+        <h2>Encapsulation</h2>
+        <ul>
+            <li>Scoping og functions</li>
+            <li>Immutability / controllable mutation</li>
+        </ul>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>Encapsulation</h2>
         <pre class="prettyprint codeborder"><code class="language-js" data-src="code/encapsulating.src"></code></pre>
+    </div>
+</section>
+
+<!--
+#### Pattern: Encapsulating
+ -->
+<section class="slide">
+    <div>
+        <h2>Asynchronous Module Definition </h2>
+        <ul>
+            <li>Loading modules async</li>
+            <li>Less script tags in index.html</li>
+            <li>Loading the modules in right order</li>
+        </ul>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>Asynchronous Module Definition </h2>
+        <pre class="prettyprint codeborder"><code class="language-js" data-src="code/amd.src"></code></pre>
+    </div>
+</section>
+
+<!--
+#### Testing with Jasmine
+ -->
+<section class="slide">
+    <div>
+        <h2>Test framework</h2>
+        <ul>
+            <li>Jasmine is a great test framework!</li>
+            <li>Test your code!</li>
+            <li>Tip: inject your dom (don't jQuery it all over the place)</li>
+        </ul>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>Jasmine by example</h2>
+        <pre class="prettyprint codeborder"><code class="language-js" data-src="code/jasmine.src"></code></pre>
+    </div>
+</section>
+<section class="slide shout">
+    <div>
+        <h2>TEST
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <br/>YOUR<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            CODE!</h2>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>Resources</h2>
+        <ul>
+            <li><a href="http://pivotal.github.io/jasmine/">Jasmine</a> </li>
+            <li><a href="http://requirejs.org/">RequireJS / AMD</a></li>
+            <li><a href="http://jstherightway.org/">JavaScript - The Right Way</a></li>
+        </ul>
     </div>
 </section>
 

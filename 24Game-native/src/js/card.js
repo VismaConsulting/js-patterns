@@ -1,8 +1,6 @@
 var visma = visma || {};
-/**
- * Collection of domain classes
- */
-(function (visma) {
+
+visma.Card = (function (visma) {
     "use strict";
 
     function Card(suit, value) {
@@ -22,6 +20,7 @@ var visma = visma || {};
     Card.values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 //    ,11, 12, 13
     ];
-    visma.Card = Card;
+    return Card;
+
 
 })(visma);

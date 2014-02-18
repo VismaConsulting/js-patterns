@@ -1,6 +1,6 @@
 var visma = visma || {};
 
-(function (visma, Card) {
+visma.game = (function (Card) {
     "use strict";
 
     function drawFromNewDeck(numberOfCards) {
@@ -40,9 +40,9 @@ var visma = visma || {};
         }
     }
 
-    visma.game = {
+    return {
         drawFromNewDeck: drawFromNewDeck,
         verifyAnswer: verifyAnswer
     };
 
-})(visma, visma.Card);
+})(visma.Card);

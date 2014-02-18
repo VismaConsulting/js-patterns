@@ -1,15 +1,12 @@
 var visma = visma || {};
-
-(function (jquery, visma) {
+visma.feature = (function (jquery) {
     "use strict";
 
-    this.innter = function () {
-        return 'Hello from inner function';
+    function innter() { return 'Hello from inner function'; };
+    function f1() { console.log(innter()); };
+
+    return { // exposing only f1().
+        feature: f1,
+        f1: f1,
     };
-    this.f1 = function () {
-        console.log(this.innter());
-    };
-    visma.feature = {
-        feature: f1
-    };
-})(jquery, visma);
+})(jQuery);

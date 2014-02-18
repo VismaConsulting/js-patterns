@@ -1,6 +1,6 @@
 var visma = visma || {};
 
-(function (visma, $) {
+visma.app = (function (GameLoop, game, $) {
     "use strict";
 
     var gameLoop,
@@ -26,7 +26,7 @@ var visma = visma || {};
     }
 
     function init() {
-        gameLoop = new visma.GameLoop(visma.game);
+        gameLoop = new GameLoop(game);
 
         $submitBtn.on("click", function () {
             console.log("got answer", $answerValue.find("span").text());
@@ -148,10 +148,10 @@ var visma = visma || {};
         return melding;
     }
 
-    visma.app = {
+    return {
         main: main,
         init: init,
         startGame: startGame
     };
 
-})(visma, jQuery);
+})(visma.GameLoop, visma.game, jQuery);

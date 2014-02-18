@@ -1,6 +1,6 @@
 var visma = visma || {};
 
-(function(visma){
+visma.GameLoop = (function(){
     "use strict";
 
     function GameLoop(game) {
@@ -49,10 +49,9 @@ var visma = visma || {};
             h = h % 24;
             return { d: d, h: h, m: m, s: s };
         };
-
     }
 
-    visma.GameLoop = GameLoop;
+    return GameLoop;
 
 })(visma);
 

@@ -1,0 +1,9 @@
+describe("A suite", function() {
+    var a;
+    it("a spec", function() {
+        a = true;
+        expect(a).toBe(true);
+        expect(a).not.toBe(false);
+        expect('foo').toEqual("foo");
+    });
+});
