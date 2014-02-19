@@ -1,1 +1,220 @@
-Hello World
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>js Patterns</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1274, user-scalable=no">
+    <link rel="stylesheet" href="shower/themes/visma/styles/screen.css">
+    <link rel="stylesheet" href="shower/themes/visma/styles/print.css" media="print">
+    <link rel="stylesheet" href="shower/themes/visma/google-code-prettify/prettify.css" type="text/css"/>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+
+    <script type="text/javascript" src="shower/themes/visma/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="js/extra.js"></script>
+
+    <style>
+        #Cover h2 {
+            margin: 65px 0 0;
+            color: #FFF;
+            text-align: center;
+            font-size: 70px;
+        }
+
+        #Picture h2 {
+            color: #FFF;
+        }
+
+        pre.prettyprint {
+            border: none;
+            /*border-left:  1px solid #888;*/
+        }
+
+        #github {
+            color: #969696;
+            font: bold 25px/1 "PT Sans Narrow", sans-serif;
+        }
+
+        #github img {
+            width: 10%;
+            display: inline-block;
+            position: relative;
+        }
+    </style>
+</head>
+<body class="list">
+
+
+<header class="caption">
+    <h1>js Patterns</h1>
+
+    <p>
+        <a href="#"> Ingar Abrahamsen</a>, <a href="http://visma.com">Visma Consulting</a><br/>
+        <a href="#"> Jon Freberg</a>, <a href="http://visma.com">Visma Consulting</a>
+    </p>
+</header>
+
+<section class="slide covershell" id="jz12-guava">
+    <div>
+        <h1>Ingar Abrahamsen<br/>Jon Freberg</h1>
+
+        <h2>js Pattern</h2>
+
+        <div id="github"><img src="pictures/GitHub-Logo.png"> ...</div>
+    </div>
+</section>
+
+<!--
+####
+#### Intro
+####
+ -->
+<section class="slide">
+    <div>
+        <h2>Agenda</h2>
+        <ul>
+            <li>Immediately Invoked Function Expression</li>
+            <li>Namespacing</li>
+            <li>Encapsulating Functions</li>
+            <li>Asynchronous Module Definition (AMD)</li>
+            <li>Testing!</li>
+        </ul>
+    </div>
+</section>
+
+<!--
+#### Pattern: Self invoked function
+ -->
+<section class="slide">
+    <div>
+        <h2>Immediately Invoked Function Expression</h2>
+        <ul>
+            <li>Executed at most ones</li>
+            <li>Loaded ones</li>
+            <li>does not pollute global variable space</li>
+        </ul>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>Immediately Invoked Function Expression</h2>
+        <pre class="prettyprint codeborder"><code class="language-js" data-src="code/selfInvoke.src"></code></pre>
+    </div>
+</section>
+
+<!--
+#### Pattern: Namespacing
+ -->
+<section class="slide">
+    <div>
+        <h2>Namespacing</h2>
+        <ul>
+            <li>Reduces the global variable issue</li>
+            <li>Gives a package like structure</li>
+            <li>Injection like pattern</li>
+        </ul>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>Namespacing</h2>
+        <pre class="prettyprint codeborder"><code class="language-js" data-src="code/namespacing.src"></code></pre>
+    </div>
+</section>
+
+<!--
+#### Pattern: Module Pattern
+ -->
+<section class="slide">
+    <div>
+        <h2>Module Pattern</h2>
+        <pre class="prettyprint codeborder"><code class="language-js" data-src="code/modulepattern.src"></code></pre>
+    </div>
+</section>
+
+<!--
+#### Pattern: Encapsulating
+ -->
+<section class="slide">
+    <div>
+        <h2>Encapsulation</h2>
+        <ul>
+            <li>Scoping og functions</li>
+            <li>Immutability / controllable mutation</li>
+        </ul>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>Encapsulation</h2>
+        <pre class="prettyprint codeborder"><code class="language-js" data-src="code/encapsulating.src"></code></pre>
+    </div>
+</section>
+
+<!--
+#### Pattern: Encapsulating
+ -->
+<section class="slide">
+    <div>
+        <h2>Asynchronous Module Definition </h2>
+        <ul>
+            <li>Loading modules async</li>
+            <li>Less script tags in index.html</li>
+            <li>Loading the modules in right order</li>
+        </ul>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>Asynchronous Module Definition </h2>
+        <pre class="prettyprint codeborder"><code class="language-js" data-src="code/amd.src"></code></pre>
+    </div>
+</section>
+
+<!--
+#### Testing with Jasmine
+ -->
+<section class="slide">
+    <div>
+        <h2>Test framework</h2>
+        <ul>
+            <li>Jasmine is a great test framework!</li>
+            <li>Test your code!</li>
+            <li>Tip: inject your dom (don't jQuery it all over the place)</li>
+        </ul>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>Jasmine by example</h2>
+        <pre class="prettyprint codeborder"><code class="language-js" data-src="code/jasmine.src"></code></pre>
+    </div>
+</section>
+<section class="slide shout">
+    <div>
+        <h2>TEST
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <br/>YOUR<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            CODE!</h2>
+    </div>
+</section>
+<section class="slide">
+    <div>
+        <h2>Resources</h2>
+        <ul>
+            <li><a href="http://pivotal.github.io/jasmine/">Jasmine</a> </li>
+            <li><a href="http://requirejs.org/">RequireJS / AMD</a></li>
+            <li><a href="http://jstherightway.org/">JavaScript - The Right Way</a></li>
+        </ul>
+    </div>
+</section>
+
+
+<!--<div class="progress">-->
+<!--<div></div>-->
+<!--</div>-->
+<script src="shower/shower.js"></script>
+
+</body>
+</html>
