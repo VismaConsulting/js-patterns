@@ -1,6 +1,0 @@
-(function () {
-    "use strict";
-
-    // your awesome code here...
-    console.log('Immediately invoked function');
-})();

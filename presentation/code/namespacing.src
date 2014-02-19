@@ -1,9 +1,0 @@
-var visma = visma || {}; // create namespace if it doesn’t exist
-
-visma.myFunction = (function(consulting, utils, jQuery) {
-    "use strict";
-
-    visma.feature = function() {
-        console.log('my feature', consulting);
-    };
-})(visma.consulting, visma.utils, jQuery);
